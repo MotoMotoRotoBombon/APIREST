@@ -1,6 +1,6 @@
 const Facturapi = require('facturapi').default;
 
-const facturapi = new Facturapi("sk_test_2NbGV0oEzXwqaA9Jdv4va2o4qPW148mLD5YenKxP6j");
+const facturapi = new Facturapi("sk_test_7wqPxEe9nl6mdoz0Kjawb9PbPEWZbYOGLp3k5a1M28");
 
 //cambios
 async function createProduct(product){
