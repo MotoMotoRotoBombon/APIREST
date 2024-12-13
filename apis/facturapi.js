@@ -1,6 +1,9 @@
 const Facturapi = require('facturapi').default;
+require('dotenv').config(); // Carga las variables
 
-const facturapi = new Facturapi("sk_test_7wqPxEe9nl6mdoz0Kjawb9PbPEWZbYOGLp3k5a1M28");
+const facturapi = new Facturapi(process.env.FACTURAPI_SECRET_KEY);
+
+module.exports = { facturapi, createProduct, createCustomer, updateCustomer, deleteCustomer };
 
 //cambios
 async function createProduct(product){

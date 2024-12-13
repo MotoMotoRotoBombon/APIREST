@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
-const url = "mongodb+srv://PadrinoTheBest:PadrinitoBestie@shippings.n10xz.mongodb.net/?retryWrites=true&w=majority&appName=Shippings"
+require('dotenv').config(); // Carga las variables
 
 async function connectDB() {
-    try {
-        await mongoose.connect(url);
-        console.log("MongoDB connected");
-    } catch (error) {
-        console.log("MongoDB connection failed ", error);
-    }
-}//cambios
+  try {
+    await mongoose.connect(process.env.MONGO_DB_URL);
+    console.log("MongoDB connected");
+  } catch (error) {
+    console.log("MongoDB connection failed ", error);
+  }
+}
 
 module.exports = connectDB;
-
